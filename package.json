@@ -9,9 +9,11 @@
     "@zeit/next-css": "^0.2.0",
     "antd": "^3.6.5",
     "babel-plugin-import": "^1.8.0",
+    "chart.js": "^2.7.2",
     "express": "^4.16.3",
     "next": "^6.0.3",
     "react": "^16.4.1",
+    "react-chartjs-2": "^2.7.2",
     "react-dom": "^16.4.1"
   },
   "devDependencies": {
