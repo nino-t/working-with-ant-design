@@ -1,7 +1,9 @@
 import HeadHtml from '../components/headHtml'
 import { MainLayout } from '../components/layouts'
 import { Button, Row, Col, Icon, DatePicker, Card, List, Avatar } from 'antd'
-import { Line, Doughnut, HorizontalBar } from 'react-chartjs-2'
+import { Line, Doughnut, HorizontalBar, Bar } from 'react-chartjs-2'
+
+import { DoughnutChart } from '../components/charts'
 
 const data = {
   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -66,38 +68,32 @@ const data2 = [
   },
 ]
 
-const data3 = {
-	labels: [
-		'Red',
-		'Green',
-		'Yellow'
-	],
-	datasets: [{
-		data: [300, 50, 100],
-		backgroundColor: [
-		'#FF6384',
-		'#36A2EB',
-		'#FFCE56'
-		],
-		hoverBackgroundColor: [
-		'#FF6384',
-		'#36A2EB',
-		'#FFCE56'
-		]
-	}]
-}
-
 const data4 = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'],
   datasets: [
     {
-      label: 'My First dataset',
-      backgroundColor: 'rgba(255,99,132,0.2)',
-      borderColor: 'rgba(255,99,132,1)',
+      label: 'ReactJS',
+      backgroundColor: '#E1F5FE',
+      borderColor: '#4FC3F7',
       borderWidth: 1,
-      hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-      hoverBorderColor: 'rgba(255,99,132,1)',
-      data: [65, 59, 80, 81, 56, 55, 40]
+      hoverBackgroundColor: '#E1F5FE',
+      hoverBorderColor: '#4FC3F7',
+      data: [100, 90, 80, 70, 60, 50, 40, 30, 20]
+    }
+  ]
+}
+
+const data5 = {
+  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'],
+  datasets: [
+    {
+      label: 'ReactJS',
+      backgroundColor: '#E1F5FE',
+      borderColor: '#4FC3F7',
+      borderWidth: 1,
+      hoverBackgroundColor: '#E1F5FE',
+      hoverBorderColor: '#4FC3F7',
+      data: [100, 90, 80, 70, 60, 50, 40, 30, 20]
     }
   ]
 }
@@ -228,17 +224,23 @@ export default () => (
 			<div className="wrap-item">
 				<Row gutter={16}>
 					<Col span={10}>
-						<Card title="Language" bordered={false}>
-							<Doughnut data={data3} />
+						<Card title="Top Programming Language" bordered={false}>
+							<DoughnutChart />
 					   </Card>								
 					</Col>
 					<Col span={14}>
-						<Card title="Regional" bordered={false}>
-						  <HorizontalBar data={data4} />
+						<Card title="ReactJS Trending" bordered={false}>
+						  <HorizontalBar data={data4} height="180" />
 					   </Card>								
 					</Col>
 				</Row>
 			</div>			
+
+			<div className="wrap-item">
+				<Card title="Statistic Javascript Framework" bordered={false}>
+				  <Bar data={data4} height="180" />
+			   	</Card>								
+			</div>						
 
 			<div className="wrap-item">
 				<Row gutter={16}>

@@ -111,3 +111,16 @@ h1{
 	padding: 0;
 	overflow: hidden;
 }
+.wwa-menu-chart{
+	width: 75%;
+	margin: 0 auto;
+	margin-top: 25px;
+}
+.circle-doughnut{
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 10px;
+
+}
