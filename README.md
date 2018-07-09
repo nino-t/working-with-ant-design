@@ -19,7 +19,7 @@ To build application, you can use this command
 npm run build
 ```
 
-And to running server with port 3000
+And to running server with port 4000
 
 ```
 npm run start
@@ -28,7 +28,7 @@ npm run start
 You can access in web browser with this address
 
 ```
-http://localhost:3000
+http://localhost:4000
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
