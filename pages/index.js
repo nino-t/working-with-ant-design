@@ -1,10 +1,11 @@
 import HeadHtml from '../components/headHtml'
 import { MainLayout } from '../components/layouts'
-import { Button, Row, Col, Icon, DatePicker, Card, List, Avatar } from 'antd'
+import { Button, Row, Col, Icon, DatePicker, Card, List, Avatar, Progress } from 'antd'
 import { Bar } from 'react-chartjs-2'
 
 import { DoughnutChart, HorizontalBarChart, LineChart } from '../components/charts'
 
+const { MonthPicker } = DatePicker;
 const data2 = [
   {
     title: 'Ant Design Title 1',
@@ -18,6 +19,9 @@ const data2 = [
   {
     title: 'Ant Design Title 4',
   },
+  {
+    title: 'Ant Design Title 5'
+  }
 ]
 
 const data5 = {
@@ -58,8 +62,7 @@ export default () => (
 		<div className="wrap">
 			<div className="wrap-item wrap-filter">
 				<div className="pull-left">
-					<DatePicker />
-					<DatePicker />
+					<MonthPicker />
 				</div>
 				<div className="pull-right">
 					<DatePicker />
@@ -71,7 +74,7 @@ export default () => (
 			<div className="wrap-item wrap-count">
 				<div className="well no-padding">
 					<Row>
-						<Col span={8}>						
+						<Col span={8} xs={{ span: 24 }} sm={{ span: 8 }}>
 							<div className="well-item">
 								<b>Member</b>
 								<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -83,7 +86,7 @@ export default () => (
 							</div>
 						</Col>
 
-						<Col span={8}>
+						<Col span={8} xs={{ span: 24 }} sm={{ span: 8 }}>
 							<div className="well-item">
 								<b>Member</b>
 								<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -95,7 +98,7 @@ export default () => (
 							</div>
 						</Col>
 
-						<Col span={8}>
+						<Col span={8} xs={{ span: 24 }} sm={{ span: 8 }}>
 							<div className="well-item">
 								<b>Member</b>
 								<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -119,7 +122,7 @@ export default () => (
 			<div className="wrap-item wrap-top-resource">
 				<Card title="Top Resource" bordered={false} style={{ width: '100%' }}>
 					<Row>
-						<Col span={8}>						
+						<Col span={8} xs={{ span: 24 }} sm={{ span: 8 }}>
 							<div className="well-item">
 								<b>Member</b>
 								<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -131,7 +134,7 @@ export default () => (
 							</div>
 						</Col>
 
-						<Col span={8}>
+						<Col span={8} xs={{ span: 24 }} sm={{ span: 8 }}>
 							<div className="well-item">
 								<b>Member</b>
 								<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -143,7 +146,7 @@ export default () => (
 							</div>
 						</Col>
 
-						<Col span={8}>
+						<Col span={8} xs={{ span: 24 }} sm={{ span: 8 }}>
 							<div className="well-item">
 								<b>Member</b>
 								<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -160,12 +163,12 @@ export default () => (
 
 			<div className="wrap-item">
 				<Row gutter={16}>
-					<Col span={10}>
+					<Col span={10} xs={{ span: 24 }} sm={{ span: 12 }}>
 						<Card title="Top Programming Language" bordered={false}>
 							<DoughnutChart />
 					   </Card>								
 					</Col>
-					<Col span={14}>
+					<Col span={10} xs={{ span: 24 }} sm={{ span: 12 }}>
 						<Card title="ReactJS Trending" bordered={false}>
 						  <HorizontalBarChart />
 					   </Card>								
@@ -175,23 +178,7 @@ export default () => (
 
 			<div className="wrap-item">
 				<Row gutter={16}>
-					<Col span={12}>
-						<Card title="Top Member" bordered={false}>
-						  <List
-						    itemLayout="horizontal"
-						    dataSource={data2}
-						    renderItem={item => (
-						      <List.Item>
-						        <List.Item.Meta
-						          avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-						          title={<a href="https://ant.design">{item.title}</a>}
-						          description="Ant Design, a design language for background applications, is refined by Ant UED Team"
-						        />
-						      </List.Item> 
-						    )} />
-					   </Card>								
-					</Col>
-					<Col span={12}>
+					<Col span={12} xs={{ span: 24 }} sm={{ span: 12 }}>
 						<Card title="Top Mentor" bordered={false}>
 						  <List
 						    itemLayout="horizontal"
@@ -201,8 +188,34 @@ export default () => (
 						        <List.Item.Meta
 						          avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
 						          title={<a href="https://ant.design">{item.title}</a>}
-						          description="Ant Design, a design language for background applications, is refined by Ant UED Team"
+						          description="Ant Design, a design language."
+						          style={{ flex: '70%' }}
 						        />
+						        <div style={{ flex: '30%', display: 'flex', justifyContent: 'center', alignItems:'Center', flexDirection:'column'}}>
+						        	<div><b>80</b>/<span>100</span></div>
+						        	<Progress percent={80} showInfo={false} />
+						        </div>
+						      </List.Item> 
+						    )} />
+					   </Card>								
+					</Col>
+					<Col span={12} xs={{ span: 24 }} sm={{ span: 12 }}>
+						<Card title="Top Mentor" bordered={false}>
+						  <List
+						    itemLayout="horizontal"
+						    dataSource={data2}
+						    renderItem={item => (
+						      <List.Item>
+						        <List.Item.Meta
+						          avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+						          title={<a href="https://ant.design">{item.title}</a>}
+						          description="Ant Design, a design language."
+						          style={{ flex: '70%' }}
+						        />
+						        <div style={{ flex: '30%', display: 'flex', justifyContent: 'center', alignItems:'Center', flexDirection:'column'}}>
+						        	<div><b>55</b>/<span>100</span></div>
+						        	<Progress percent={55} showInfo={false} />
+						        </div>
 						      </List.Item> 
 						    )} />
 					   </Card>								

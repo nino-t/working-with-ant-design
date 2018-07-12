@@ -11050,7 +11050,7 @@ textarea.ant-input-number {
 }
 .ant-layout-header {
   background: #3498db;
-  padding: 0 15px;
+  padding: 0 30px;
   height: 54px;
   line-height: 54px;
 }
@@ -13230,13 +13230,13 @@ textarea.ant-pagination-options-quick-jumper input {
   stroke: #f5f5f5;
 }
 .ant-progress-circle-path {
-  stroke: #1890ff;
+  stroke: #4FC3F7;
   animation: ant-progress-appear 0.3s;
 }
 .ant-progress-success-bg,
 .ant-progress-bg {
   border-radius: 100px;
-  background-color: #1890ff;
+  background-color: #4FC3F7;
   transition: all 0.4s cubic-bezier(0.08, 0.82, 0.17, 1) 0s;
   position: relative;
 }

@@ -24,7 +24,7 @@ export const HorizontalBarChart = props => {
 
 	return (
 		<div>
-			<HorizontalBar data={data} options={options} height="180" />
+			<HorizontalBar data={data} options={options} height={245} />
 		</div>
 	)
 }

@@ -42,7 +42,7 @@ export const DoughnutChart = props => {
 			<div className="wwa-menu-chart">
 				{
 					data.labels.map((label, index) => (
-						<div style={{ display:'flex' }}>
+						<div style={{ display:'flex' }} key={index}>
 							<span>
 								<div className="circle-doughnut" style={{ background: data.datasets[0].backgroundColor[index] }}></div>
 								<b style={{ flex: 1 }}>{label}</b>

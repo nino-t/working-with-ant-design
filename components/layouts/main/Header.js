@@ -16,6 +16,18 @@ export default () => (
           </Menu>
         </div>
         <div className="pull-right">
+          <div style={{ display:'flex', justifyContent:'center'}}>
+            <div style={{ paddingRight: '10px' }} className="wrap-username">
+              <b style={{ color: '#fff' }}>Trisno Nino</b>
+              {/*<small style={{ color: '#fff' }}>Web Developer</small>*/}
+            </div>          
+            <div>
+              <img src="/static/img/me.png" width="35" />
+            </div>
+            <div style={{ paddingLeft: '10px' }}>
+              <Icon type="caret-down" style={{ color: '#fff' }} className="ic-caret" />              
+            </div>            
+          </div>
         </div>      
         <div className="clearfix"></div>
       </Header>
